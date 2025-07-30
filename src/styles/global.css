@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-content {
+  margin-left: 250px; /* Match your sidebar's fixed width */
+  padding: 1rem;       /* Optional, for inner spacing */
+}
+
+/* global.css */
+:root {
+  --primary-main: #3f51b5;
+  --primary-light: #757de8;
+  --primary-dark: #002984;
+  --secondary-main: #f50057;
+  --secondary-light: #ff4081;
+  --secondary-dark: #c51162;
+  --background-default: #f8f9fa;
+  --background-paper: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] {
+  --primary-main: #7986cb;
+  --primary-light: #aab6fe;
+  --primary-dark: #49599a;
+  --secondary-main: #ff4081;
+  --secondary-light: #ff79b0;
+  --secondary-dark: #c60055;
+  --background-default: #121212;
+  --background-paper: #1e1e1e;
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title:after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
+}
+
+[data-theme="dark"] .section-title:after {
+  background: rgba(255, 255, 255, 0.1);
+}
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.sectionHeader h5 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+}

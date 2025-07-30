@@ -1,0 +1,301 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles */
+.drawer {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.drawerPaper {
+  width: 240px;
+  background-color: var(--primary-main);
+  color: white;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  justify-content: flex-end;
+  min-height: 64px;
+}
+
+/* Main content */
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 240px;
+  background-color: var(--background-default);
+  transition: margin-left 0.3s ease;
+}
+
+.desktopOpen .mainContent {
+  margin-left: 240px;
+}
+
+/* Theme toggle button */
+.themeToggle {
+  background-color: var(--primary-main);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.themeToggle:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Section headings */
+.courseSection h2,
+.todoSection h2,
+.calendarSection h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-main);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-main);
+  padding-left: 0.75rem;
+}
+
+/* Course grid */
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Course card */
+.courseCard {
+  background-color: var(--background-paper);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-left: 5px solid var(--primary-main);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.courseTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.courseInstructor {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.progressContainer {
+  margin-bottom: 16px;
+}
+
+.courseButton {
+  background-color: var(--primary-main);
+  color: white !important;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 500;
+  text-transform: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.courseButton:hover {
+  background-color: var(--primary-dark);
+}
+
+/* To-do list */
+.todoList {
+  background: var(--background-paper);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.todoItem:hover {
+  background-color: #f8f9fa;
+}
+
+.todoText {
+  flex-grow: 1;
+  margin-left: 12px;
+}
+
+.todoTitle {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.todoCourse {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.todoDueDate {
+  font-size: 0.85rem;
+  color: #e74c3c;
+  margin-left: 8px;
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.completed .MuiTypography-root {
+  text-decoration: line-through;
+}
+
+/* Calendar widget */
+.calendarWidget {
+  background: var(--background-paper);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+}
+
+.react-calendar__tile--now {
+  background: #f0f8ff;
+}
+
+.react-calendar__tile--active {
+  background: var(--primary-main);
+  color: white;
+}
+
+/* Fade-in for sections */
+.courseSection,
+.todoSection,
+.calendarSection {
+  animation: fadeIn 0.5s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Breadcrumbs (if used) */
+.breadcrumbs {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.breadcrumbLink {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+  color: #45B7D1;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .courseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .drawer {
+    width: 80px;
+  }
+
+  .drawerPaper {
+    width: 80px;
+  }
+
+  .mainContent {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .courseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .drawer {
+    width: 0;
+  }
+
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 70px; /* for mobile menu */
+  }
+
+  .menuButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Dark mode enhancements */
+[data-theme="dark"] .courseCard,
+[data-theme="dark"] .todoList,
+[data-theme="dark"] .calendarWidget {
+  background-color: var(--background-paper);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .courseTitle,
+[data-theme="dark"] .todoTitle,
+[data-theme="dark"] .section-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .courseInstructor,
+[data-theme="dark"] .todoCourse {
+  color: var(--text-secondary);
+}
+

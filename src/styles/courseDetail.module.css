@@ -1,0 +1,230 @@
+/* Container layout */
+.courseDetail {
+  display: flex;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 240px;
+}
+
+.desktopOpen {
+  margin-left: 240px !important;
+}
+
+/* Not found page */
+.notFound {
+  padding: 4rem;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: #3498db;
+  font-weight: 500;
+}
+
+.backLink svg {
+  margin-right: 0.5rem;
+}
+
+/* Course Header */
+.courseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.courseInfo {
+  flex: 1;
+}
+
+.courseTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.instructor {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.progressBar {
+  flex-grow: 1;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+}
+
+.courseMeta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.courseColor {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  margin-left: 2rem;
+}
+
+/* Tabs section */
+.tabContent {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* Overview tab */
+.overviewTab {
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleAccordion {
+  margin-bottom: 1rem;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.moduleTitle {
+  font-weight: 600;
+  color: #2c3e50;
+  flex: 1;
+}
+
+.moduleStatus {
+  margin-left: auto;
+}
+
+.moduleContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.moduleItem:hover {
+  background-color: #f9f9f9;
+}
+
+.itemIcon svg {
+  font-size: 1.5rem;
+  color: #3498db;
+}
+
+.itemDetails {
+  flex-grow: 1;
+}
+
+.itemStatus svg {
+  font-size: 1.3rem;
+}
+
+/* Assignments tab */
+.assignmentsTab {
+  padding-top: 1rem;
+}
+
+.assignmentsTable {
+  width: 100%;
+}
+
+/* Grades tab */
+.gradesTab {
+  padding-top: 1rem;
+}
+
+.gradeSummary {
+  margin-top: 1rem;
+}
+
+.gradeProgress {
+  height: 12px;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  background-color: #ecf0f1;
+}
+
+/* Grades Table */
+.gradesTable {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/* Resources tab */
+.resourcesTab {
+  padding-top: 1rem;
+}
+
+.resourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.resourceItem {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .courseHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .courseColor {
+    margin-left: 0;
+  }
+
+  .tabContent {
+    padding: 1rem;
+  }
+
+  .moduleItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
